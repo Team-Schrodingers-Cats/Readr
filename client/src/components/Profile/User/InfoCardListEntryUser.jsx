@@ -76,19 +76,19 @@ const InfoCardEntry = ({ book }) => {
     isClicked ? setClicked(false) : setClicked(true);
   };
 
-  const renderButtonView = () => {
-    if (buttonView === 'submitted') {
-      return (
-        <Button
-          variant="outlined"
-          color="primary"
-          onClick={handleClickOpen}
-        >
-        See Review
-        </Button>
-      );
-    }
-  };
+  // const renderButtonView = () => {
+  //   if (buttonView === 'submitted') {
+  //     return (
+  //       <Button
+  //         variant="outlined"
+  //         color="primary"
+  //         onClick={handleClickOpen}
+  //       >
+  //       See Review
+  //       </Button>
+  //     );
+  //   }
+  // };
 
   // const string = { summary };
 
@@ -152,12 +152,12 @@ const InfoCardEntry = ({ book }) => {
                   </Grid>
                 </Grid>
                 <Typography gutterBottom variant="caption">
-                  <div onClick={handleClick} style={{ textAlign: 'justify', margin: 'auto' }}>
-                    {isClicked ? `${book.description}` : `${`${book.description}`.substring(0, 100)}(...)`}
+                  <div onClick={handleClick} style={{ wordSpacing: '.1em', margin: 'auto' }}>
+                    {isClicked ? `${book.description}` : `${`${book.description}`.substring(0, 200)}(...)`}
                   </div>
                 </Typography>
               </Grid>
-              <Grid item container direction="row">
+              {/* <Grid item container direction="row">
                 <ButtonGroup>
                   <div>
                     <Button
@@ -213,7 +213,7 @@ const InfoCardEntry = ({ book }) => {
                     </DialogActions>
                   </Dialog>
                 </div>
-              </Grid>
+              </Grid> */}
             </Grid>
           </Grid>
         </Grid>
